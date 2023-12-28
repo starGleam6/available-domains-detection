@@ -2,7 +2,7 @@
 
 ## 名词说明
 
-- 前置页，也就是此项目。一般为轻量级没有特征的网站，不容易被封。一般只设一个稳定的域名。假设域名为 https://v2baord.com
+- 前置页，也就是此项目。一般为轻量级没有特征的网站，不容易被封。一般只设一个稳定的域名。假设域名为 https://v2board.com
 - 跳转页，是你通过此项目要跳转的目标网站。一般是机场或成人类这种容易被封的网站。一般会有多个域名。假设域名为 https://demo.v2board.com 、https://demo2.v2board.com
 
 ## 部署
@@ -21,9 +21,9 @@ data.json 文件中可以修改和添加你的网站地址。这里需要注意�
 
 ## 跨域问题
 
-如果部署后，想要跳转到的网站有跨域的问题。首先要确保跳转的这个网站是你的。需要在跳转的网站项目的 Nginx 配置中填写下面的配置以解决此问题。此处的 http://v2board.com https://v2board.com 是你的前置页。
+如果部署后，想要跳转到的网站有跨域的问题。首先要确保跳转的这个网站是你的。需要在跳转的网站项目的 Nginx 配置中填写下面的配置以解决此问题。此处的 https://v2board.com 是你的前置页。
 
-add_header 'Access-Control-Allow-Origin' 'http://v2board.com https://v2board.com';
+add_header 'Access-Control-Allow-Origin' 'https://v2board.com';
 
 ## Crisp 客服
 
