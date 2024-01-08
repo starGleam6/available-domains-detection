@@ -1,1 +1,12 @@
-["https://demo.v2board.com/#/", "https://demo2.v2board.com/#/"]
+[
+  {
+    "checkUrl": "https://demo.v2board.com/api/v1/guest/comm/config",
+    "jumpUrl": "https://demo.v2board.com/#/"
+  },
+  {
+    "checkUrl": "https://demo2.v2board.com/api/v1/guest/comm/config",
+    "jumpUrl": "https://demo2.v2board.com/#/"
+  },
+  "https://demo3.v2board.com/#/",
+  "https://demo4.v2board.com/#/"
+]

@@ -188,10 +188,18 @@
 
     function checkDomain(hosts) {
       for (var i = 0; i < hosts.length; i++) {
-        const currentUrl = hosts[i];
-        fetch(currentUrl).then((res) => {
+        let checkUrl;
+        let jumpUrl;
+        if (typeof hosts[i] === 'object' && hosts[i] !== null) {
+          checkUrl = hosts[i].checkUrl;
+          jumpUrl =  hosts[i].jumpUrl;
+        } else {
+          checkUrl = hosts[i];
+          jumpUrl = hosts[i];
+        }
+        fetch(checkUrl).then((res) => {
           if (res.ok && res.status === 200) {
-            window.location.href = joinUrlAndPath(currentUrl, path) + location.search;
+            window.location.href = joinUrlAndPath(jumpUrl, path) + location.search;
           }
         });
       }

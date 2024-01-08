@@ -13,6 +13,8 @@
 
 data.json 文件中可以修改和添加你的网站地址。这里需要注意的是，如果你的跳转页的前端是 hash 路径，比如 https://demo.v2board.com/#/ 那么请把 /#/ 写上，后面如果有参数方便拼接。
 
+增加了检测链接和跳转链接分开配置的功能，可以分别设置 checkUrl 和 jumpUrl。以应对网站首页设置了 CloudFlare 质询或者 CDN 之类的机器人拦截。checkUrl 建议配置不会出发质询的链接，比如接口 API Url，jumpUrl 建议配置站点首页。具体详细配置例子参见 data.json。
+
 ## 路径跳转
 
 该前置页支持跳转路径。假设你的网站是 https://demo.v2board.com/#/ （注意，如果面板前端是有 hash 路径的，请加上方便跳转），跳转路径是 register，邀请码 9527。
